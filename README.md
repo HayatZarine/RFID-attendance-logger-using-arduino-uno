@@ -16,3 +16,12 @@ Authorized card → green LED + double beep + name + timestamp logged
 Unknown card → red LED + long buzz + "UNKNOWN" flagged in log
 Serial Monitor outputs live CSV — copy directly to Excel or Google Sheets
 Built on Arduino Uno + MFRC522, simulated on Wokwi 
+
+## Live simulation
+- Just click the green button to see the simulation
+https://wokwi.com/projects/461733111727989761
+
+## Photos
+<img width="653" height="499" alt="image" src="https://github.com/user-attachments/assets/c976bab9-e43f-4a72-8f7c-8b524cbbc87d" />
+
+
