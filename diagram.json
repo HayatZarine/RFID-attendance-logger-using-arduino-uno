@@ -1,0 +1,56 @@
+{
+  "version": 1,
+  "author": "Zarine Hayat",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": -57, "left": 172.2, "attrs": {} },
+    { "type": "board-mfrc522", "id": "rfid1", "top": 198.95, "left": -6.16, "attrs": {} },
+    { "type": "wokwi-led", "id": "led1", "top": 6, "left": 42.2, "attrs": { "color": "red" } },
+    {
+      "type": "wokwi-led",
+      "id": "led2",
+      "top": -42,
+      "left": 23,
+      "attrs": { "color": "limegreen" }
+    },
+    {
+      "type": "wokwi-buzzer",
+      "id": "bz1",
+      "top": 136.8,
+      "left": 520.2,
+      "attrs": { "volume": "0.1" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": -24.85,
+      "left": 86.4,
+      "attrs": { "value": "220" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r2",
+      "top": 32.75,
+      "left": 86.4,
+      "attrs": { "value": "220" }
+    }
+  ],
+  "connections": [
+    [ "rfid1:SDA", "uno:10", "magenta", [ "h374.4", "v-220.8" ] ],
+    [ "rfid1:SCK", "uno:13", "magenta", [ "h0" ] ],
+    [ "rfid1:MOSI", "uno:11", "magenta", [ "h0" ] ],
+    [ "rfid1:MISO", "uno:12", "magenta", [ "h0" ] ],
+    [ "rfid1:RST", "uno:9", "magenta", [ "h0" ] ],
+    [ "rfid1:GND", "uno:GND.1", "black", [ "h0" ] ],
+    [ "rfid1:3.3V", "uno:3.3V", "magenta", [ "h0" ] ],
+    [ "led2:A", "r1:1", "green", [ "v0" ] ],
+    [ "r1:2", "uno:5", "green", [ "v0" ] ],
+    [ "r2:2", "uno:4", "red", [ "v0" ] ],
+    [ "r2:1", "led1:A", "red", [ "v0" ] ],
+    [ "led2:C", "uno:GND.2", "green", [ "v0" ] ],
+    [ "led1:C", "uno:GND.3", "red", [ "v0" ] ],
+    [ "bz1:1", "uno:7", "green", [ "v0" ] ],
+    [ "bz1:2", "uno:GND.3", "green", [ "v0" ] ]
+  ],
+  "dependencies": {}
+}
